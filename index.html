@@ -1,116 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felipe | Roblox Backend Developer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe | Roblox Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-bubbles@3.0.2/tsparticles.preset.bubbles.bundle.min.js"></script>
 </head>
 <body>
+  <div id="tsparticles"></div>
+  <div class="page-glow" aria-hidden="true"></div>
 
-<header>
-  <div class="container navbar">
-    <div class="logo">Felipe</div>
-    <nav class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="#home" aria-label="Felipe home">
+        <span class="logo-mark">F</span>
+        <span>Felipe</span>
+      </a>
 
-<main class="container hero">
-  <div class="hero-text">
-    <p class="subtitle">ROBLOX DEVELOPER</p>
-    <h1>Felipe</h1>
-    <h2>Backend & Gameplay Developer</h2>
-    <p>
-      Specialized in scalable Roblox systems, combat frameworks,
-      inventories, anti-cheat solutions and backend architecture.
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container hero">
+    <section class="hero-text" aria-label="Intro">
+      <p class="subtitle">ROBLOX DEVELOPER</p>
+      <h1>Felipe</h1>
+      <h2>Backend & Gameplay Developer</h2>
+      <p>
+        I build secure, scalable Roblox systems for serious games: combat,
+        inventory, progression, AI behavior, anti-cheat and server architecture
+        designed to stay clean under pressure.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a href="#projects" class="btn secondary">View Work</a>
+      </div>
+
+      <div class="stats" aria-label="Portfolio stats">
+        <div class="stat">
+          <h3>20+</h3>
+          <p>Systems shipped</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Server validated</p>
+        </div>
+        <div class="stat">
+          <h3>0</h3>
+          <p>Memory leaks</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="profile-card" aria-label="Developer profile">
+      <div class="avatar-frame">
+        <img src="avatar.png" alt="Felipe Roblox avatar">
+        <div class="avatar-fallback" aria-hidden="true">
+          <span>F</span>
+        </div>
+      </div>
+
+      <div class="profile-meta">
+        <div>
+          <span>Status</span>
+          <strong>Available for commissions</strong>
+        </div>
+        <div>
+          <span>Focus</span>
+          <strong>Backend systems</strong>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <section id="projects" class="container section-block">
+    <div class="section-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="projects">
+      <article class="card">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/AIV_L2DMW68" title="Combat Framework" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="content">
+          <span class="project-tag">Combat</span>
+          <h3>Combat Framework</h3>
+          <p>Raycast-based hit detection for precise combat mechanics, responsive enemy AI, custom hit effects and strict server-side validation against exploiters.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Pef3QwWoufE" title="Advanced Movement System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="content">
+          <span class="project-tag">Movement</span>
+          <h3>Advanced Movement</h3>
+          <p>Smooth optimized gameplay mechanics with custom character physics, client-predicted replication and stable execution under heavy server load.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/vEueNOmTh1U" title="RPG Core Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="content">
+          <span class="project-tag">Progression</span>
+          <h3>RPG Core Systems</h3>
+          <p>Integrated RPG progression with secure datastore persistence for XP and levels, plus server-validated status point distribution.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="container section-block">
+    <div class="section-heading">
+      <p class="eyebrow">Toolkit</p>
+      <h2 class="section-title">Technical Skills</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill">Advanced Luau</div>
+      <div class="skill">Data Store</div>
+      <div class="skill">Optimization</div>
+      <div class="skill">Anti-Cheat</div>
+      <div class="skill">OOP & Metatables</div>
+      <div class="skill">Combat Systems</div>
+      <div class="skill">NPC AI</div>
+      <div class="skill">Server Architecture</div>
+    </div>
+  </section>
+
+  <section id="about" class="container section-block about-grid">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Clean systems. Fast gameplay. Secure servers.</h2>
+    </div>
+
+    <p class="about">
+      I am a Roblox developer focused on performance, clean architecture,
+      scalability and secure server-side development. My priority is building
+      systems that feel smooth for players and stay maintainable for the team
+      after the first release.
     </p>
+  </section>
 
-    <div class="buttons">
+  <section id="contact" class="container contact section-block">
+    <div class="contact-box">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something strong.</h2>
+      <div class="contact-lines">
+        <p><span>Discord</span> dunus0</p>
+        <p><span>Roblox</span> felipesut17</p>
+      </div>
     </div>
+  </section>
 
-    <div class="stats">
-      <div class="stat"><h3>20+</h3><p>Systems</p></div>
-      <div class="stat"><h3>100%</h3><p>Server Side</p></div>
-      <div class="stat"><h3>0</h3><p>Memory Leaks</p></div>
-    </div>
-  </div>
+  <footer>
+    <p>© 2026 Felipe - Roblox Developer</p>
+  </footer>
 
-  <div class="avatar">
-    <img src="avatar.png" alt="Avatar">
-  </div>
-</main>
-
-<section id="projects" class="container">
-  <h2 class="section-title">Featured Projects</h2>
-
-  <div class="projects">
-    <article class="card">
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/AIV_L2DMW68" title="Combat Framework" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="content">
-        <h3>Combat Framework (Player & NPC)</h3>
-        <p>Raycast-based hit detection for precise combat mechanics. Includes responsive enemy AI, custom hit effects, and strict server-side validation to prevent exploiters.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Pef3QwWoufE" title="Advanced Movement System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="content">
-        <h3>Advanced Movement & Mechanics</h3>
-        <p>Smooth, optimized gameplay mechanics featuring custom character physics, client-predicted replication, and lag-free execution even under heavy server load.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/vEueNOmTh1U" title="RPG Core Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="content">
-        <h3>RPG Core Systems (XP & Stats)</h3>
-        <p>A fully integrated RPG progression framework. Secure datastore integration for XP/Level persistence, and server-validated status point distribution.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="skills" class="container">
-  <h2 class="section-title">Technical Skills</h2>
-  <div class="skills">
-    <div class="skill">Advanced Luau</div>
-    <div class="skill">Data Store</div>
-    <div class="skill">Optimization</div>
-    <div class="skill">Anti-Cheat</div>
-    <div class="skill">OOP & Metatables</div>
-  </div>
-</section>
-
-<section id="about" class="container">
-  <h2 class="section-title">About Me</h2>
-  <p class="about">
-    Roblox developer focused on performance, clean architecture,
-    scalability and secure server-side development.
-  </p>
-</section>
-
-<section id="contact" class="container contact">
-  <h2 class="section-title">Contact</h2>
-  <div class="contact-box">
-    Discord: dunus0<br>
-    Roblox: felipesut17
-  </div>
-</section>
-
-<footer>
-  © 2026 Felipe - Roblox Developer
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
