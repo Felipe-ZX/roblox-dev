@@ -11,14 +11,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-bubbles@3.0.2/tsparticles.preset.bubbles.bundle.min.js"></script>
 </head>
 <body>
-  <div id="tsparticles"></div>
-  <div class="page-glow" aria-hidden="true"></div>
+  <div id="tsparticles" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="page-vignette" aria-hidden="true"></div>
 
-  <header>
+  <header class="site-header">
     <div class="container navbar">
       <a class="logo" href="#home" aria-label="Felipe home">
         <span class="logo-mark">F</span>
-        <span>Felipe</span>
+        <span class="logo-text">Felipe</span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
@@ -31,14 +32,12 @@
   </header>
 
   <main id="home" class="container hero">
-    <section class="hero-text" aria-label="Intro">
-      <p class="subtitle">ROBLOX DEVELOPER</p>
+    <section class="hero-text reveal" aria-label="Intro">
+      <p class="subtitle">Roblox Developer</p>
       <h1>Felipe</h1>
-      <h2>Backend & Gameplay Developer</h2>
-      <p>
-        I build secure, scalable Roblox systems for serious games: combat,
-        inventory, progression, AI behavior, anti-cheat and server architecture
-        designed to stay clean under pressure.
+      <h2>Backend systems that make Roblox games feel fast, fair, and alive.</h2>
+      <p class="hero-copy">
+        I build combat, inventory, progression, AI behavior, anti-cheat and server architecture with clean Luau, strict validation and performance-first decisions.
       </p>
 
       <div class="buttons">
@@ -46,25 +45,26 @@
         <a href="#projects" class="btn secondary">View Work</a>
       </div>
 
-      <div class="stats" aria-label="Portfolio stats">
+      <div class="stats reveal-group" aria-label="Portfolio stats">
         <div class="stat">
-          <h3>20+</h3>
+          <h3><span class="counter" data-target="20" data-suffix="+">0</span></h3>
           <p>Systems shipped</p>
         </div>
         <div class="stat">
-          <h3>100%</h3>
+          <h3><span class="counter" data-target="100" data-suffix="%">0</span></h3>
           <p>Server validated</p>
         </div>
         <div class="stat">
-          <h3>0</h3>
+          <h3><span class="counter" data-target="0">0</span></h3>
           <p>Memory leaks</p>
         </div>
       </div>
     </section>
 
-    <aside class="profile-card" aria-label="Developer profile">
+    <aside class="profile-card reveal" aria-label="Developer profile">
+      <div class="profile-shine" aria-hidden="true"></div>
       <div class="avatar-frame">
-        <img src="avatar.png" alt="Felipe Roblox avatar">
+        <img src="avatar.png" alt="Felipe Roblox avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
         <div class="avatar-fallback" aria-hidden="true">
           <span>F</span>
         </div>
@@ -77,55 +77,55 @@
         </div>
         <div>
           <span>Focus</span>
-          <strong>Backend systems</strong>
+          <strong>Backend & gameplay</strong>
         </div>
       </div>
     </aside>
   </main>
 
-  <section id="projects" class="container section-block">
+  <section id="projects" class="container section-block reveal">
     <div class="section-heading">
       <p class="eyebrow">Selected work</p>
       <h2 class="section-title">Featured Projects</h2>
     </div>
 
     <div class="projects">
-      <article class="card">
+      <article class="card reveal">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/AIV_L2DMW68" title="Combat Framework" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="content">
           <span class="project-tag">Combat</span>
           <h3>Combat Framework</h3>
-          <p>Raycast-based hit detection for precise combat mechanics, responsive enemy AI, custom hit effects and strict server-side validation against exploiters.</p>
+          <p>Raycast-based hit detection, responsive enemy AI, custom hit effects and strict server-side validation against exploiters.</p>
         </div>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/Pef3QwWoufE" title="Advanced Movement System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="content">
           <span class="project-tag">Movement</span>
           <h3>Advanced Movement</h3>
-          <p>Smooth optimized gameplay mechanics with custom character physics, client-predicted replication and stable execution under heavy server load.</p>
+          <p>Smooth optimized mechanics with custom character physics, client-predicted replication and stable execution under load.</p>
         </div>
       </article>
 
-      <article class="card">
+      <article class="card reveal">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/vEueNOmTh1U" title="RPG Core Systems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="content">
           <span class="project-tag">Progression</span>
           <h3>RPG Core Systems</h3>
-          <p>Integrated RPG progression with secure datastore persistence for XP and levels, plus server-validated status point distribution.</p>
+          <p>Integrated RPG progression with datastore persistence for XP, levels and server-validated status point distribution.</p>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="skills" class="container section-block">
+  <section id="skills" class="container section-block reveal">
     <div class="section-heading">
       <p class="eyebrow">Toolkit</p>
       <h2 class="section-title">Technical Skills</h2>
@@ -143,21 +143,18 @@
     </div>
   </section>
 
-  <section id="about" class="container section-block about-grid">
+  <section id="about" class="container section-block about-grid reveal">
     <div class="section-heading">
       <p class="eyebrow">About</p>
       <h2 class="section-title">Clean systems. Fast gameplay. Secure servers.</h2>
     </div>
 
     <p class="about">
-      I am a Roblox developer focused on performance, clean architecture,
-      scalability and secure server-side development. My priority is building
-      systems that feel smooth for players and stay maintainable for the team
-      after the first release.
+      I am a Roblox developer focused on performance, clean architecture, scalability and secure server-side development. My priority is building systems that feel smooth for players and stay maintainable after the first release.
     </p>
   </section>
 
-  <section id="contact" class="container contact section-block">
+  <section id="contact" class="container contact section-block reveal">
     <div class="contact-box">
       <p class="eyebrow">Contact</p>
       <h2>Let's build something strong.</h2>
@@ -169,7 +166,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Felipe - Roblox Developer</p>
+    <p>&copy; 2026 Felipe - Roblox Developer</p>
   </footer>
 
   <script src="script.js"></script>
