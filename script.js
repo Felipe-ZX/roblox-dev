@@ -1,6 +1,4 @@
 const revealElements = document.querySelectorAll(".reveal");
-const counters = document.querySelectorAll(".counter");
-let countersStarted = false;
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -17,33 +15,6 @@ revealElements.forEach((element, index) => {
   element.style.transitionDelay = `${Math.min(index * 55, 220)}ms`;
   revealObserver.observe(element);
 });
-
-function animateCounters() {
-  if (countersStarted) return;
-  countersStarted = true;
-
-  counters.forEach((counter) => {
-    const target = Number(counter.dataset.target || 0);
-    const suffix = counter.dataset.suffix || "";
-    const duration = target === 0 ? 500 : 1450;
-    const startTime = performance.now();
-
-    function update(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = Math.round(target * eased);
-
-      counter.textContent = `${value}${suffix}`;
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  });
-}
 
 const stats = document.querySelector(".stats");
 if (stats) {
