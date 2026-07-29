@@ -114,3 +114,34 @@ if (window.tsParticles) {
   }
   });
 }
+
+const projectsToggle = document.querySelector(".projects-toggle");
+const projectsPanel = document.querySelector(".projects-panel");
+
+if (projectsToggle && projectsPanel) {
+  const toggleText = projectsToggle.querySelector(".toggle-text");
+
+  projectsToggle.addEventListener("click", () => {
+    const isOpen = projectsPanel.classList.toggle("is-open");
+
+    projectsToggle.setAttribute("aria-expanded", String(isOpen));
+    projectsPanel.hidden = false;
+
+    if (toggleText) {
+      toggleText.textContent = isOpen ? "Hide Projects" : "Show Projects";
+    }
+
+    if (!isOpen) {
+      window.setTimeout(() => {
+        projectsPanel.hidden = true;
+      }, 360);
+    }
+
+    if (isOpen) {
+      projectsPanel.querySelectorAll(".reveal").forEach((card, index) => {
+        card.style.transitionDelay = `${index * 90}ms`;
+        card.classList.add("is-visible");
+      });
+    }
+  });
+}
