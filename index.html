@@ -84,11 +84,19 @@
   </main>
 
   <section id="projects" class="container section-block reveal">
-    <div class="section-heading">
+  <div class="section-heading projects-heading">
+    <div>
       <p class="eyebrow">Selected work</p>
       <h2 class="section-title">Featured Projects</h2>
     </div>
 
+    <button class="projects-toggle" type="button" aria-expanded="false">
+      <span class="toggle-dot"></span>
+      <span class="toggle-text">Show Projects</span>
+    </button>
+  </div>
+
+  <div class="projects-panel" hidden>
     <div class="projects">
       <article class="card reveal">
         <div class="video-container">
@@ -123,7 +131,8 @@
         </div>
       </article>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="skills" class="container section-block reveal">
     <div class="section-heading">
